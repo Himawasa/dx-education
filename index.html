@@ -525,6 +525,80 @@
             min-width: 40px;
         }
 
+        /* ===== 料金セクション ===== */
+        .pricing-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-1);
+        }
+
+        .pricing-plan-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-value {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.25rem;
+        }
+
+        .pricing-per {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing-total {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: var(--gradient-2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-features li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features li::before {
+            content: '✓';
+            color: var(--success);
+            font-weight: 700;
+        }
+
         /* ===== フッター ===== */
         footer {
             text-align: center;
@@ -838,6 +912,27 @@
                 <div class="goal-arrow">↓</div>
                 <div class="goal-after">😊 「要件定義書で<br>開発者に正確に発注できる」</div>
             </div>
+        </div>
+    </section>
+
+    <!-- ===== 料金 ===== -->
+    <section id="pricing">
+        <div class="section-label">PRICING</div>
+        <h2 class="section-title">料金</h2>
+        <p class="section-desc">
+            シンプルな料金体系。追加費用はありません。
+        </p>
+        <div class="pricing-card">
+            <div class="pricing-plan-name">IT基礎 × GAS入門コース</div>
+            <div class="pricing-value">¥10,000 <span style="font-size:1rem;font-weight:400;color:var(--text-secondary)">/回（税抜）</span></div>
+            <div class="pricing-total">全10回 合計 ¥100,000（税抜）</div>
+            <ul class="pricing-features">
+                <li>全10回のカリキュラム（各回30分）</li>
+                <li>オンライン（Google Meet）対応</li>
+                <li>各回の振り返り資料つき</li>
+                <li>受講期間中のチャットサポート</li>
+                <li>最終回に「要件定義書」テンプレート進呈</li>
+            </ul>
         </div>
     </section>
 
